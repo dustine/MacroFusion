@@ -1,0 +1,11 @@
+{
+    "name": "MacroFusion",
+    "version": "0.0.0",
+    "title": "Macro Fusion",
+    "author": "Dustine",
+    "dependencies": ["base >= 0.15.0"],
+    "description": "Take your portable fusion reactor out and into the real world! And then build all the infrastructure it requires to work outside of your suit. Adds a plobable Fusion reactor, together with all of its building and one-time fueling requirements (lasers!).",
+    "factorio_version": "0.15",
+    "homepage": "https://github.com/dustine/MacroFusion",
+    "repository": "https://github.com/dustine/MacroFusion"
+}
