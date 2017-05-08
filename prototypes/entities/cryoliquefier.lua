@@ -11,14 +11,14 @@ local entity = {
   selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
   crafting_categories = {"macro-fusion-cryogenics"},
   mode = "output-to-separate-pipe",
-  module_specifications = {
+  module_specification = {
     module_slots = 3,
-    module_info_icon_shift = {0, 0.8}
+    -- module_info_icon_shift = {0, 0.8}
   },
   allowed_effects = {"consumption", "speed", "pollution"},
   source_inventory_size = 0,
   result_inventory_size = 0,
-  crafting_speed = 0.5,
+  crafting_speed = 1,
   resistances ={{
     type = "fire",
     percent = 80
@@ -27,20 +27,20 @@ local entity = {
     percent = 30
   }},
   fluid_boxes = {{
-    production_type = "input-output",
+    production_type = "input",
     pipe_covers = pipecoverspictures(),
     base_area = 4,
     base_level = -1,
     pipe_connections = {{
-      type="input-output", position = {-1.5, 2}
+      type="input", position = {-2, 2}
     },{
-      type="input-output", position = {1.5, 2}
+      type="input", position = {2, 2}
     }}
   },{
     production_type = "output",
     pipe_covers = pipecoverspictures(),
     base_level = 1,
-    pipe_connections = {{ position = {0, -3} }}
+    pipe_connections = {{position = {0, -3}}}
   }},
   energy_source = {
     type = "electric",
@@ -55,8 +55,8 @@ local entity = {
       height = 160,
       frame_count = 1,
       line_length = 1,
-      shift = {0, 0},
-      animation_speed = 0.5
+      -- shift = {0, 0},
+      -- animation_speed = 0.5
     },
     east = {
       filename = "__MacroFusion__/graphics/entities/cryoliquefier-h.png",
@@ -64,8 +64,8 @@ local entity = {
       height = 96,
       frame_count = 1,
       line_length = 1,
-      shift = {0, 0},
-      animation_speed = 0.5
+      -- shift = {0, 0},
+      -- animation_speed = 0.5
     },
     south = {
       filename = "__MacroFusion__/graphics/entities/cryoliquefier.png",
@@ -73,8 +73,8 @@ local entity = {
       height = 160,
       frame_count = 1,
       line_length = 1,
-      shift = {0, 0},
-      animation_speed = 0.5
+      -- shift = {0, 0},
+      -- animation_speed = 0.5
     },
     west = {
       filename = "__MacroFusion__/graphics/entities/cryoliquefier-h.png",
@@ -82,8 +82,8 @@ local entity = {
       height = 96,
       frame_count = 1,
       line_length = 1,
-      shift = {0, 0},
-      animation_speed = 0.5
+      -- shift = {0, 0},
+      -- animation_speed = 0.5
     }
   },
   vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },

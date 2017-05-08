@@ -3,8 +3,8 @@ local fluid = {
   name = "macro-fusion-deuterium-oxide",
   default_temperature = 25,
   heat_capacity = "0.1KJ",
-  base_color = {r=1.000, g=0.650, b=0.800},
-  flow_color = {r=1.000, g=1.000, b=1.000},
+  base_color = {r=0.000, g=0.650, b=0.800},
+  flow_color = {r=0.000, g=1.000, b=1.000},
   max_temperature = 100,
   icons = {{icon= "__base__/graphics/icons/fluid/water.png", tint={r=0, g=1, b=1, a=1}}}, -- water icon with #00ffffff (cyan) tint
   pressure_to_speed_ratio = 0.4,
