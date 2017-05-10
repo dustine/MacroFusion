@@ -1,5 +1,5 @@
 -- detect if we have angel's hydrogen sulfide
-if angelsmods and data.raw.fluid["hydrogen-sulfide"] then
+if angelsmods and data.raw.fluid["gas-hydrogen-sulfide"] then
   local function replaceIngredient(recipe, type, old, new)
     for _, ingredient in pairs(recipe.ingredients) do
       if ingredient.type == type and ingredient.name == old then
@@ -15,6 +15,8 @@ if angelsmods and data.raw.fluid["hydrogen-sulfide"] then
     end
   end
 
-  replaceIngredient(data.raw.recipe["macro-fusion-hydrogen-sulfide"], "fluid", "macro-fusion-hydrogen-sulfide", "hydrogen-sulfide")
-  replaceIngredient(data.raw.recipe["macro-fusion-deuterium-oxide"], "fluid", "macro-fusion-hydrogen-sulfide", "hydrogen-sulfide")
+  replaceIngredient(data.raw.recipe["macro-fusion-hydrogen-sulfide"], "fluid", "macro-fusion-hydrogen-sulfide", "gas-hydrogen-sulfide")
+  replaceIngredient(data.raw.recipe["macro-fusion-deuterium-oxide"], "fluid", "macro-fusion-hydrogen-sulfide", "gas-hydrogen-sulfide")
+
+  -- TODO Add angel converter
 end
