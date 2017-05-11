@@ -64,12 +64,13 @@ local entity = {
   close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
 }
 
-local coolant = {
+local fluid = {
   type = "fluid",
   name = "macro-fusion-liquid-nitrogen",
   default_temperature = -210, -- more like minimum
   max_temperature = -195,
   heat_capacity = "0.2KJ",
+  auto_barrel = false,
   base_color = {r=0.7, g=0.7, b=1.0},
   flow_color = {r=1.0, g=1.0, b=1.0},
   icon = "__MacroFusion__/graphics/fluids/liquid-nitrogen.png",
@@ -81,9 +82,10 @@ local coolant = {
 local precursor = {
   type = "fluid",
   name = "macro-fusion-just-nitrogen",
-  default_temperature = 15, -- more like minimum
+  default_temperature = 15,
   max_temperature = 1000,
   heat_capacity = "0.2KJ",
+  auto_barrel = false,
   icon = "__MacroFusion__/graphics/fluids/just-nitrogen.png",
   order = "a[fluid]-z[mods]MacroFusion-d[liquid-nitrogen]",
   base_color = {r=1.0, g=1.0, b=1.0, a=1.0},
@@ -125,17 +127,15 @@ local recipe = {
 local precursor_recipe = {
   type = "recipe",
   name = "macro-fusion-just-nitrogen",
-  -- icon = "__MacroFusion__/graphics/fluids/just-nitrogen.png",
-  -- localised_name = "recipe-name.macro-fusion-nitrogen",
   category = "crafting-with-fluid",
-  sub_category = "chemistry",
+  sub_category = "fluid-recipes",
   energy_required = "3",
   enabled = false,
   ingredients = {},
   results = {{type = "fluid", name = "macro-fusion-just-nitrogen", amount = 20}}
 }
 
-local coolant_recipe = {
+local fluid_recipe = {
   type = "recipe",
   name = "macro-fusion-liquid-nitrogen",
   category = "macro-fusion-cryogenics",
@@ -180,4 +180,4 @@ local recipe_category = {
   name = "macro-fusion-cryogenics"
 }
 
-data:extend {entity, precursor, coolant, item, recipe, precursor_recipe, coolant_recipe, technology, recipe_category}
+data:extend {entity, precursor, fluid, item, recipe, precursor_recipe, fluid_recipe, technology, recipe_category}

@@ -7,7 +7,7 @@ local fluid = {
   flow_color = {r=1.000, g=1.000, b=1.000},
   -- flow_color = {r=0.365, g=0.780, b=0.937}, -- #D7EDF9
   max_temperature = 100,
-  icons = {{icon= "__base__/graphics/icons/fluid/water.png", tint={r=0, g=1, b=1, a=1}}}, -- water icon with #00ffffff (cyan) tint
+  icon = "__MacroFusion__/graphics/fluids/deuterium-oxide.png",
   pressure_to_speed_ratio = 0.4,
   flow_to_energy_ratio = 0.59,
   order = "a[fluid]-z[mods]MacroFusion-c[deuterium-oxide]"
@@ -17,7 +17,6 @@ local recipe = {
   type = "recipe",
   name = "macro-fusion-deuterium-oxide",
   category = "chemistry",
-  -- icons = {{icon= "__base__/graphics/icons/fluid/water.png", tint={r=0, g=1, b=1, a=1}}}, -- water icon with #00ffffff (cyan) tint
   energy_required = 12,
   enabled = false,
   ingredients =
